@@ -20,26 +20,30 @@ In this example, the studentGrade function should check the test score of your f
 grade based on the grading scale. Since you scored 85, it falls within the range of 80-89, so the function should return "B".
 */
 
-void main() {  
-  String studentName = "Eayaz";  
+void main() {
+  String studentName = "Eayaz";
+  int testScore = 85;
 
-   String grade = studentGrade('eayaz', 85);
+
+  String grade = studentGrade(studentName, testScore);
+
+
   print("$studentName's grade: $grade");
-  }
-  
-String studentGrade(String name, int testScore) {
-  if (testScore < 0 || testScore > 100) {
-    return "Invalid Grade";
-  } else if (testScore >= 90) {
-    return "$name got an A";
-  } else if (testScore >= 80) {
-    return "$name got a B";
-  } else if (testScore >= 70) {
-    return "$name got a C";
-  } else if (testScore >= 60) {
-    return "$name got a D";
-  } else {
-    return "$name got an F";
-  }
-  
 }
+
+String studentGrade(String name, int score) {
+  if (score < 0 || score > 100) {
+    return "Invalid Grade";
+  } else if (score >= 90 && score<=100) {
+    return "A";
+  } else if (score >= 80 && score<=89) {
+    return "B";
+  } else if (score >= 70 && score<=79) {
+    return "C";
+  } else if (score >= 60 && score<=69) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
+

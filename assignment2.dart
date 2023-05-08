@@ -29,7 +29,7 @@ void main() {
   
 String studentGrade(String name, int testScore) {
   if (testScore < 0 || testScore > 100) {
-    return "Invalid score";
+    return "Invalid Grade";
   } else if (testScore >= 90) {
     return "$name got an A";
   } else if (testScore >= 80) {

@@ -2,7 +2,6 @@
 You are building a student grading system.Each student has a name and a test score. 
 Your task is to write a Dart function called studentGrade that takes in the student's
 name and test score, and returns their corresponding grade based on the following grading scale:
-
 A: 90 - 100
 B: 80 - 89
 C: 70 - 79
@@ -20,3 +19,27 @@ void main() {
 In this example, the studentGrade function should check the test score of your full name and assign the corresponding
 grade based on the grading scale. Since you scored 85, it falls within the range of 80-89, so the function should return "B".
 */
+
+void main() {  
+  String studentName = "Eayaz";  
+
+   String grade = studentGrade('eayaz', 85);
+  print("$studentName's grade: $grade");
+  }
+  
+String studentGrade(String name, int testScore) {
+  if (testScore < 0 || testScore > 100) {
+    return "Invalid score";
+  } else if (testScore >= 90) {
+    return "$name got an A";
+  } else if (testScore >= 80) {
+    return "$name got a B";
+  } else if (testScore >= 70) {
+    return "$name got a C";
+  } else if (testScore >= 60) {
+    return "$name got a D";
+  } else {
+    return "$name got an F";
+  }
+  
+}
